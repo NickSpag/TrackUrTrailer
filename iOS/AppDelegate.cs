@@ -2,6 +2,11 @@
 using UIKit;
 using TrackUrTrailer.Standard;
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Push;
+
 namespace TrackUrTrailer.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -21,6 +26,7 @@ namespace TrackUrTrailer.iOS
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+            AppCenter.Start("732f0238-7dab-44fa-89bb-7ca0511b70bc", typeof(Analytics), typeof(Crashes), typeof(Push));
 
             Help.StartUp.InitializeWithDependencies(DependencyRegistrar.IOSContainer());
 
