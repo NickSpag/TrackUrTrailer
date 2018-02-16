@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WN9-8b-ody">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="aTu-Ro-OCO">
+            <objects>
+                <viewController id="ks0-Fx-CCw" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2hg-Xe-Ep0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZAn-ft-aU5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ohq-BM-995">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-v0-pBZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fUU-v0-pBZ" secondAttribute="trailing" id="FFx-id-1dy"/>
+                            <constraint firstItem="fUU-v0-pBZ" firstAttribute="leading" secondItem="ohq-BM-995" secondAttribute="leading" id="Rvw-Cg-ABr"/>
+                            <constraint firstItem="ZAn-ft-aU5" firstAttribute="top" secondItem="fUU-v0-pBZ" secondAttribute="bottom" id="U4B-FM-ld8"/>
+                            <constraint firstItem="fUU-v0-pBZ" firstAttribute="top" secondItem="ohq-BM-995" secondAttribute="top" id="XvW-wm-khK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="31T-dC-i9O"/>
+                    <connections>
+                        <outlet property="Map" destination="fUU-v0-pBZ" id="XP6-ym-idK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKW-g7-0co" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="883.74384236453204"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="M1Z-1H-Kgs">
+            <objects>
+                <tabBarController id="WN9-8b-ody" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lby-yk-hKw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ks0-Fx-CCw" kind="relationship" relationship="viewControllers" id="IOe-Lb-hzR"/>
+                        <segue destination="NzY-I6-z9F" kind="relationship" relationship="viewControllers" id="CRf-tf-Ur2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6A-yG-Xvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="97"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="iZH-Xv-57N">
+            <objects>
+                <tableViewController id="NzY-I6-z9F" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yAz-5b-L0X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="yTd-0q-lmD">
+                                <rect key="frame" x="0.0" y="28" width="375" height="68"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yTd-0q-lmD" id="Gnn-dN-WCr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="67.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otn-6v-45Q">
+                                            <rect key="frame" x="10" y="10.000000000000002" width="41.666666666666664" height="23.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tID-vV-ukT">
+                                            <rect key="frame" x="9.9999999999999964" y="36" width="50.666666666666657" height="23.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" fixedFrame="YES" text="Delivery location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykB-IZ-F5h">
+                                            <rect key="frame" x="139" y="11" width="220" height="23.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bit-FB-88y">
+                                            <rect key="frame" x="72.666666666666657" y="49" width="274.33333333333337" height="2"/>
+                                        </progressView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IwV-8N-3jS">
+                                            <rect key="frame" x="80" y="8" width="30" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.95762723684310913" green="0.93486493825912476" blue="0.83872050046920776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="tID-vV-ukT" firstAttribute="leading" secondItem="otn-6v-45Q" secondAttribute="leading" id="0qz-lh-jU8"/>
+                                        <constraint firstItem="otn-6v-45Q" firstAttribute="leading" secondItem="Gnn-dN-WCr" secondAttribute="leading" constant="10" id="TNg-Om-sDH"/>
+                                        <constraint firstItem="otn-6v-45Q" firstAttribute="top" secondItem="Gnn-dN-WCr" secondAttribute="top" constant="10" id="Vk0-fS-xhT"/>
+                                        <constraint firstItem="Bit-FB-88y" firstAttribute="leading" secondItem="tID-vV-ukT" secondAttribute="trailing" constant="12" id="WoN-4g-a0E"/>
+                                        <constraint firstAttribute="bottom" secondItem="tID-vV-ukT" secondAttribute="bottom" constant="8" id="X1f-Ke-u2E"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Bit-FB-88y" secondAttribute="bottom" constant="6" id="emH-ZB-vHW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Bit-FB-88y" secondAttribute="trailing" constant="12" id="lUi-BB-acv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NzY-I6-z9F" id="Hfq-kw-2vf"/>
+                            <outlet property="delegate" destination="NzY-I6-z9F" id="uI5-tR-hba"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="qkx-Qr-rA0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRw-3T-tLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="97"/>
+        </scene>
+    </scenes>
+</document>
