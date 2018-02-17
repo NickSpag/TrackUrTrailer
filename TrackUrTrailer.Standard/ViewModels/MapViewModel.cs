@@ -13,7 +13,7 @@ namespace TrackUrTrailer.Standard
         {
             get
             {
-                if (dataStore.GetCachedOrders().FirstOrDefault() is TUTOrder order)
+                if (dataStore?.GetCachedOrders().FirstOrDefault() is TUTOrder order)
                 {
                     return (order.DeliveryVehicle.CurrentLocation.Latitude,
                             order.DeliveryVehicle.CurrentLocation.Longitude);
@@ -49,7 +49,7 @@ namespace TrackUrTrailer.Standard
 
         private async Task CreateAnnotations()
         {
-            var orders = await dataStore.GetOrdersAsync();
+            var orders = await dataStore.GetOrdersAsync(true);
 
             foreach (var order in orders)
             {

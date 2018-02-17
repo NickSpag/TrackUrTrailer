@@ -27,7 +27,7 @@ namespace TrackUrTrailer.Standard
                 try
                 {
                     var instance = container.GetInstance<T>();
-                    return container.GetInstance<T>();
+                    return instance;
                 }
                 catch (Exception ex)
                 {

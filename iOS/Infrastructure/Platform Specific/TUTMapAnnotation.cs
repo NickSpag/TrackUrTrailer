@@ -50,15 +50,6 @@ namespace TrackUrTrailer.iOS
             }
         }
 
-        //public static TUTMapAnnotation FromLocationAndDetail(CLLocationCoordinate2D coordinate, string title, string subtitle)
-        //{
-        //    return new TUTMapAnnotation()
-        //    {
-        //        _coordinate = coordinate,
-        //        _title = title,
-        //        _subtitle = subtitle
-        //    };
-        //}
         #endregion
 
 

@@ -9,7 +9,7 @@ namespace TrackUrTrailer.iOS
         internal static Container IOSContainer()
         {
             var dependencyContainer = new Container();
-            dependencyContainer.Register<IMapAnnotation, TUTMapAnnotation>();
+            dependencyContainer.Register<IMapAnnotation, TUTMapAnnotation>(Lifestyle.Singleton);
 
             return dependencyContainer;
         }

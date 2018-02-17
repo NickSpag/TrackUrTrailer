@@ -16,6 +16,8 @@ namespace TrackUrTrailer.Standard
 
         private bool isConnected => CrossConnectivity.Current.IsConnected;
 
+        private bool hasCached = false;
+
         public CloudDataStore()
         {
             client = new HttpClient();
@@ -48,10 +50,11 @@ namespace TrackUrTrailer.Standard
 
         public async Task<IEnumerable<TUTOrder>> GetOrdersAsync(bool forceRefresh = false)
         {
-            if (isConnected || forceRefresh)
+            if (isConnected && forceRefresh && !hasCached)
             {
                 var json = await client.GetStringAsync($"api/orders");
                 cachedOrders = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<TUTOrder>>(json));
+                hasCached = true;
             }
 
             return cachedOrders;
