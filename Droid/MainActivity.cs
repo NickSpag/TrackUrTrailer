@@ -2,6 +2,10 @@
 using Android.Widget;
 using Android.OS;
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 namespace TrackUrTrailer.Droid
 {
     [Activity(Label = "TrackUrTrailer", MainLauncher = true, Icon = "@mipmap/icon")]
@@ -21,6 +25,8 @@ namespace TrackUrTrailer.Droid
             Button button = FindViewById<Button>(Resource.Id.myButton);
 
             button.Click += delegate { button.Text = $"{count++} clicks!"; };
+
+            //AppCenter.Start("IDHERE", typeof(Analytics), typeof(Crashes));
         }
     }
 }
