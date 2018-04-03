@@ -32,6 +32,21 @@ namespace TrackUrTrailer.iOS
             CenterMap();
         }
 
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+
+            switch (sender)
+            {
+                case UITabBarController tabBarController:
+                //todo: probably list all orders relevant to this user?
+                case UINavigationController navController:
+                //tood: probably list the order and direction of this user
+                default:
+                    break;
+            }
+        }
+
         private void CenterMap()
         {
             var centeringCords = (TUTMapAnnotation)annotations.FirstOrDefault();

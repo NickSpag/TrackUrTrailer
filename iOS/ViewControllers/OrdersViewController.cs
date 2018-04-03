@@ -4,16 +4,16 @@ using System;
 
 using Foundation;
 using UIKit;
-using TrackUrTrailer.Standard;
 using System.Linq;
 using System.Threading.Tasks;
+
+using TrackUrTrailer.Standard;
 
 namespace TrackUrTrailer.iOS
 {
     public partial class OrdersViewController : UITableViewController
     {
         IDataStore<TUTOrder> data;
-
 
         public OrdersViewController(IntPtr handle) : base(handle)
         {

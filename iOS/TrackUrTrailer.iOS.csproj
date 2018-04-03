@@ -136,7 +136,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="ViewControllers\" />
-    <Folder Include="Common\" />
+    <Folder Include="Concrete\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Infrastructure\Platform Specific\" />
     <Folder Include="Views\" />
@@ -174,7 +174,19 @@
     <Compile Include="Views\OrderCellBackground.designer.cs">
       <DependentUpon>OrderCellBackground.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\TUTTableViewDataSource.cs" />
+    <Compile Include="Concrete\TUTTableViewDataSource.cs" />
+    <Compile Include="ViewControllers\SignInViewController.cs" />
+    <Compile Include="ViewControllers\SignInViewController.designer.cs">
+      <DependentUpon>SignInViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\DeliveryListViewController.cs" />
+    <Compile Include="ViewControllers\DeliveryListViewController.designer.cs">
+      <DependentUpon>DeliveryListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MainTabBarViewController.cs" />
+    <Compile Include="ViewControllers\MainTabBarViewController.designer.cs">
+      <DependentUpon>MainTabBarViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TrackUrTrailer.Standard\TrackUrTrailer.Standard.csproj">
@@ -187,4 +199,5 @@
     <BundleResource Include="Resources\truckAnimation.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Azure.DocumentDB.1.20.2\build\Microsoft.Azure.DocumentDB.targets" Condition="Exists('..\packages\Microsoft.Azure.DocumentDB.1.20.2\build\Microsoft.Azure.DocumentDB.targets')" />
 </Project>

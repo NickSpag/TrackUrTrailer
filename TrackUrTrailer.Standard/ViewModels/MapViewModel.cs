@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Microsoft.AppCenter.Analytics;
 
 namespace TrackUrTrailer.Standard
 {
@@ -33,6 +34,7 @@ namespace TrackUrTrailer.Standard
 
         public async Task GetData()
         {
+            Analytics.TrackEvent("MapDataRequested");
             await dataStore.GetOrdersAsync();
             await CreateAnnotations();
         }

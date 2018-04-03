@@ -30,6 +30,8 @@ namespace TrackUrTrailer.iOS
 
             Help.StartUp.InitializeWithDependencies(DependencyRegistrar.IOSContainer());
 
+
+
             return true;
         }
 

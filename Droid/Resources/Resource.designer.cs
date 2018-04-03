@@ -63,7 +63,7 @@ namespace TrackUrTrailer.Droid
 		{
 			
 			// aapt resource value: 0x7f060000
-			public const int myButton = 2131099648;
+			public const int tabWidget1 = 2131099648;
 			
 			static Id()
 			{
